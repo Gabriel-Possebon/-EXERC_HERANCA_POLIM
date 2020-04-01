@@ -1,0 +1,41 @@
+<?php
+class Veiculo{
+  public $modelo_veiculo;
+  public $velocidade_veiculo;
+  public $passageiros;
+  public $combustivel;
+}
+class Carro extends Veiculo{
+public $portas;
+public $ano;
+
+public function Carro($modelo_veiculo,$velocidade_veiculo,$passageiros,$combustivel,$portas,$ano){
+  $this -> modelo = $modelo_veiculo;
+  $this -> velocidade = $veocidade_veiculol;
+  $this -> passageiros = $passageiros;
+  $this -> combustivel = $combustivel;
+  $this -> portas = $portas;
+  $this -> ano = $ano;
+}
+}
+class Aviao extends Veiculo{
+public $uso;
+public $tipo;
+
+public function aviao($modelo_veiculo,$velocidade_veiculo,$passageiros,$combustivel,$uso,$tipo){
+  $this -> modelo = $modelo_veiculo;
+  $this -> velocidade = $velocidade_veiculo;
+  $this -> passageiros = $passagerios;
+  $this -> combustivel = $combustivel;
+  $this -> uso = $uso;
+  $this -> tipo = $tipo;
+}}
+$carro_1 = new Carro("Camaro","250 KM/h",5,"72 litros",2,1970);
+$carro_2 = new Carro("Honda Civic","220 KM/h",5,"56 litros",4,1962);
+print_r ($carro_1);
+print_r ($carro_2);
+$aviao_1 = new Aviao("Airbus A380","1.185 KM/h",1,"320.000 litros","Transporde","Aeronave comercial");
+$aviao_2 = new Aviao("Boeing 747-400 MAX","988 KM/h",232,"226.118 litros","transporte","Aeronave comercial");
+print_r ($aviao_1);
+print_r ($aviao_2);
+?>
