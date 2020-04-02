@@ -1,0 +1,83 @@
+<?php
+
+class Imovel {
+
+public $endereco;
+
+public $preco;
+
+}
+
+class Novo extends Imovel{
+
+public $adc;
+
+public function Novo($edereco,$preco){
+
+    $this -> endereco = $edereco;
+
+    $this -> preco= $preco;
+
+}
+
+public function setAdc(){
+
+$this -> preco = $this -> preco + (($this->preco10)/100); 
+
+}
+
+public function getAdc(){
+
+    echo " imóvel novo + adicional de 10% \n";
+
+}}
+
+class Velho extends Imovel{
+
+public $desconto;
+
+public function Velho($edereco,$preco){
+
+    $this -> endereco = $edereco;
+
+    $this -> preco = $preco;
+
+}
+
+public function setdsc(){
+
+$this->preco= $this->preco - (($this->preco5)/100); 
+
+}
+
+public function getdes(){
+
+echo" imóvel velho + 5 % \n";
+
+}}
+
+$imovel_1 = new Novo("Rua Sarandi, numero 1070",224000);
+    $imovel_1 -> getAdc(); 
+
+echo "Primeiro Imovel:(Novo)\n";
+
+echo "Endereço: {$imovel_1 -> endereco}\n";
+
+echo "Preço: R$ {$imovel_1 -> preco} \n";
+    $imovel_1->setAdc();
+
+echo "preço + adicinal: {$imovel_1->preco} \n \n";
+
+$imovel_2= new Velho("Rua Eorico Gaspar Dutra, numero 689,",150000);
+    $imovel2->getdsc(); 
+
+    echo "Segundo Imovel:(Velho)\n";
+
+    echo "Endereço: {$imovel_2 -> endereco}\n";
+
+    echo "Prc: R$ {$imovel_2 -> preco} \n";
+        $imovel_2 -> setdsc();
+
+echo "Preco + desconto: {$imovel_2 -> preco}";
+
+?>
