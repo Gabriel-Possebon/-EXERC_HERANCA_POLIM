@@ -1,0 +1,101 @@
+<?php
+
+class Veterinario{
+  
+    public $ver;
+  
+    public function examina($a){
+    
+        echo "examinando $a \n";
+    
+        $this->ver=true;
+   
+  }
+}
+
+class Animal{
+
+    public $nome;
+
+    public $idade;
+
+    public $som;
+  
+    public $acao;
+
+  
+    public function setSom(){
+
+    
+        echo "{$this->nome} {$this->som}\n";
+  }
+}
+
+Class Cachorro extends Animal{
+
+    public function Cachorro($nome,$idade,$som){
+    
+        $this -> nome = $nome;
+    
+        $this -> idade = $idade;
+
+        $this -> som = $som;
+    
+        $this -> acao = "correr";
+}}
+
+Class Cavalo extends Animal{
+
+    public function Cavalo($nome,$idade,$som){
+    
+        $this -> nome = $nome;
+    
+        $this -> idade = $idade;
+
+        $this -> som = $som;
+    
+        $this->acao= "correr";
+}}
+
+Class Preguica extends Animal{
+
+    public function Preguica($nome,$idade,$som){
+    
+        $this -> nome = $nome;
+    
+        $this -> idade = $idade;
+
+        $this -> som = $som;
+    
+        $this->acao= "subir em arvore";
+}}
+
+$vet1 = new Veterinario;
+
+$anm1= new Cachorro("Luck","3 anos","latir");
+
+$vet1->examina($anm1->nome);
+
+if ($vet1->vtr == true){
+
+$anm1->setSom();
+
+}
+
+$anm2= new Cavalo("Tordilho negro","4 anos","relinchar");
+
+$vet1->examina($anm2->nome);
+
+if ($vet1->vtr == true){
+
+$anm2->setSom();}
+
+$anm3= new Preguica("Gabriel","30 anos","dormir");
+
+$vet1->examina($anm3->nome);
+
+if ($vet1->vtr == true){
+
+$anm3->setSom();}
+
+?>
